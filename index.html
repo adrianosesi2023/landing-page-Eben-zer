@@ -13,12 +13,6 @@
         a {
             text-decoration: none;
         }
-        .hours-card {
-            a {
-                color: #1a0997;
-            }
-        }
-
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -56,6 +50,13 @@
             font-size: 1.8rem;
             font-weight: bold;
             color: white;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 60px;
+            margin-right: 10px; /* Espaço entre a logo e o texto */
         }
 
         .nav-links {
@@ -273,7 +274,12 @@
         /* Responsivo */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                display: none; /* Ocultar links de navegação em telas menores */
+            }
+            .logo {
+                justify-content: center; /* Centralizar logo */
+                flex-direction: column; /* Empilhar logo e texto */
+                text-align: center; /* Centralizar texto */
             }
             .hero h1 {
                 font-size: 2.2rem;
@@ -287,19 +293,17 @@
             .service-card {
                 flex: 1 1 100%; /* Cada cartão ocupa 100% da largura em dispositivos menores */
             }
+            .phone {
+                width: 100%; /* Ajustar largura do botão telefone */
+                max-width: 300px; /* Definir largura máxima */
+                margin: 0 auto; /* Centralizar botão */
+            }
         }
 
         /* Botão telefone */
         .phone {
             width: 180px;
             padding: 8px 8px;
-        }
-
-        .logo img {
-            width: 60px;
-            position: absolute;
-            left: 455px;
-            top: 11px;
         }
 
         .endereco {
@@ -355,8 +359,9 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo"></div>
-            <div class="logo"><img src="img/logo.png" alt="">Ebenézer</div>
+            <div class="logo">
+                <img src="img/logo.png" alt="">Ebenézer
+            </div>
             <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#services">PRODUTOS</a></li>
@@ -501,6 +506,3 @@
     </script>
 </body>
 </html>
-
-
-
